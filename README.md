@@ -10,26 +10,6 @@ npm run dev
 npm run build
 ```
 
-## Deploy no GitHub Pages
-
-O deploy é automático via GitHub Actions ao fazer push na branch `main`.
-
-### Configuração inicial:
-1. No repositório GitHub: **Settings → Pages**
-2. Em "Source": selecione **GitHub Actions**
-3. Faça push na branch `main`
-
-### Se o repositório se chamar `portfolio` (não `<username>.github.io`):
-Edite `vite.config.ts`:
-```ts
-base: '/portfolio/',
-```
-
-### Se usar domínio customizado ou `<username>.github.io`:
-```ts
-base: '/',
-```
-
 ## Estrutura
 
 ```

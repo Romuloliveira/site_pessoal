@@ -13,5 +13,5 @@ export default defineConfig({
   // Set this to your GitHub repo name for GitHub Pages deployment
   // Example: if repo is github.com/romuloliveira/portfolio → base: '/portfolio/'
   // If using a custom domain → base: '/'
-  base: '/',
+  base: '/site_pessoal',
 })
