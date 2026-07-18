@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
-const route = useRoute()
 const scrolled = ref(false)
 const menuOpen = ref(false)
 
@@ -14,9 +13,9 @@ onMounted(() => window.addEventListener('scroll', handleScroll))
 onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
 const navLinks = [
-  { label: 'Sobre', to: '/#about' },
-  { label: 'Experiência', to: '/#experience' },
-  { label: 'Skills', to: '/#skills' },
+  { label: 'Sobre', href: '#about' },
+  { label: 'Experiência', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
 ]
 </script>
 
@@ -32,12 +31,11 @@ const navLinks = [
       <nav class="nav-links" :class="{ open: menuOpen }">
         <a
           v-for="link in navLinks"
-          :key="link.to"
-          :href="link.to.startsWith('/projects') ? undefined : link.to"
+          :key="link.href"
+          :href="link.href"
           @click="menuOpen = false"
         >
-          <RouterLink v-if="link.to === '/projects'" to="/projects">{{ link.label }}</RouterLink>
-          <template v-else>{{ link.label }}</template>
+          {{ link.label }}
         </a>
 
         <a
