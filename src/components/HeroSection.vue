@@ -15,10 +15,6 @@ const profile = useProfileStore()
 
     <div class="container hero-inner">
       <div class="hero-content">
-        <p class="hero-overline fade-up">
-          <span class="dot"></span>
-          Disponível para novos projetos
-        </p>
 
         <h1 class="hero-name fade-up fade-up-delay-1">
           {{ profile.name }}
